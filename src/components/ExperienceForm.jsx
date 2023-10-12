@@ -119,6 +119,7 @@ const ExperienceForm = (props) => {
                     value={leaveDate}
                     onChange={handleChange}
                 />
+                <div></div>
                 <div className='form-buttons-div'>
                     {!props.isEditing && <span></span>}
                     {props.isEditing && (

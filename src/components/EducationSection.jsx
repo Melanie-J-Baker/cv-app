@@ -4,7 +4,7 @@ const EducationSection = (props) => {
     const propsList = [...props.infoArray];
     const section = propsList.map((prop) => {
         return (
-            <div key={uniqid()} className="cv-section">
+            <div key={uniqid()} className="edu-cv-section">
                 <Subsection key={uniqid()} props={prop} />
                 <button
                     key={uniqid()}
@@ -20,7 +20,7 @@ const EducationSection = (props) => {
 
 const Subsection = ({ props }) => {
     return (
-        <div className='subsection'>
+        <div className='edu-subsection'>
             {Object.entries(props).map(([key, value]) => {
                 if (
                     value != props.form &&

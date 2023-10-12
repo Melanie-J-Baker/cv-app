@@ -163,15 +163,17 @@ const App = () => {
           )}
         </div>
         <div className='cv'>
-          <GeneralSection
-            props={generalInfoForm}
-          />
-          {generalInfoForm && (
-            <button
-              onClick={editForm}
-              className='edit'
-            >Edit</button>
-          )}
+          <div className="generalcv-div">
+            <GeneralSection
+              props={generalInfoForm}
+            />
+            {generalInfoForm && (
+              <button
+                onClick={editForm}
+                className='edit'
+              >Edit</button>
+            )}
+          </div>
           <h2>Education</h2>
           <EducationSection
             infoArray={educationForm}

@@ -69,6 +69,7 @@ const GeneralInfoForm = (props) => {
                     value={fullName}
                     placeholder="Full Name"
                     onChange={handleChange}
+                    required
                 />
                 <label htmlFor="email">Email:</label>
                 <input
@@ -78,6 +79,7 @@ const GeneralInfoForm = (props) => {
                     value={email}
                     placeholder="Email"
                     onChange={handleChange}
+                    required
                 />
                 <label htmlFor="phone">Phone:</label>
                 <input
@@ -86,7 +88,9 @@ const GeneralInfoForm = (props) => {
                     name="phone"
                     value={phone}
                     onChange={handleChange}
+                    required
                 />
+                <div></div>
                 <button className='save' type='submit' disabled={!formValid()}>Save</button>
             </form>
         </div>

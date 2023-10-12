@@ -65,7 +65,7 @@ const EducationForm = (props) => {
       <div className="education-div">
             <p className="input-heading">Education</p>
             <form onSubmit={onSubmitForm}>
-                <label htmlFor="school">School/University Address:</label>
+                <label htmlFor="school">School/Uni:</label>
                 <input
                     type="text"
                     id="school"
@@ -100,6 +100,7 @@ const EducationForm = (props) => {
                     placeholder="Grade"
                     onChange={handleChange}
                 />
+                <div></div>
                 <div className='form-buttons-div'>
                     {!props.isEditing && <span></span>}
                     {props.isEditing && (
