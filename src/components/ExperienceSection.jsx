@@ -34,6 +34,7 @@ const Subsection = ({ props }) => {
           );
         }
       })}
+      <div></div>
       <div className="dates">
         {Object.entries(props).map(([key, value]) => {
           if (value !== props.form && key != 'tasks') {

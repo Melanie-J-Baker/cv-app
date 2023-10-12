@@ -69,7 +69,7 @@ input {
   height: 25px;
   border: none;
   border-radius: 5px;
-  padding-left: 5px;
+  padding: 5px 10px;
 }
 
 button {
@@ -78,13 +78,13 @@ button {
   background-color: rgb(3, 3, 27);
   color: antiquewhite;
   transition: transform .5s ease-in-out;
-  width: 50px;
-  padding: 5px 10px;
+  padding: 5px 20px;
   align-self: flex-end;
+  margin-top: 5px;
+  font-size: 1em;
 }
 
-.edit {
-  float: left;
+.edit, .delete {
   margin-right: 10px;
 }
 
@@ -101,13 +101,21 @@ button:disabled, button:disabled:hover {
 
 button:hover {
   cursor: pointer;
-  transform: scale(1.3);
+  transform: scale(1.2);
 }
 
 .cv {
   background-color: white;
   margin-top: 20px;
   aspect-ratio: 1/1.4142;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#cv-report {
+  width: 100%;
+  align-self: center;
 }
 
 .generalcv-div {
@@ -118,12 +126,24 @@ button:hover {
   align-items: center;
   padding: 5px;
   min-height: 10%;
+  width: 100%;
+}
+
+.general-section {
+  padding: 5px;
+}
+
+.fullName {
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 10px;
 }
 
 .edu-cv-section, .exp-cv-section {
-  padding: 5px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .edu-subsection {
@@ -141,7 +161,7 @@ button:hover {
   grid-column-end: 3;
 }
 
-.course {
+.course, .title {
   font-weight: 600;
 
 }
@@ -152,32 +172,76 @@ button:hover {
   font-weight: 600;
 }
 
+.endDate {
+  text-align: end;
+}
+
 .edit {
-  width: 50px;
-  padding: 5px 10px;
   align-self: flex-end;
 }
 
 h2 {
   padding: 10px;
+  font-size: 1.2rem;
+}
+
+.exp-subsection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.company {
+  text-align: end;
+}
+
+.tasks {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-style: italic;
 }
 
 .dates {
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
-.startDate::before {
-  content: "From: ";
+  margin-left: auto;
 }
 
-.leaveDate::before {
-  content: "To: "
+.startDate::after {
+  content: " to";
 }
+
+.startDate {
+  text-align: end;
+}
+
+.leaveDate {
+  text-align: start;
+  margin-left: 5px;
+}
+
+.cv-pdf {
+  color: white;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: auto;
+}
+
+.save-text {
+  margin-right: 10px;
+}
+
+.pdf-button {
+  background-color: rgb(35, 35, 75);
+  color: white;
+  width: 150px;
+  padding: 10px 0px;
+  margin: 10px;
+}
+
 @media (min-width: 1000px) {
-  #root {
-      height: 100%;
-  }
-
   .content {
     display: grid;
     grid-template-columns: 1fr 1fr;

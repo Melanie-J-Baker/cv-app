@@ -7,6 +7,7 @@ import ExperienceForm from './ExperienceForm';
 import GeneralSection from './GeneralSection';
 import EducationSection from './EducationSection';
 import ExperienceSection from './ExperienceSection';
+import Save from './Save';
 
 
 const App = () => {
@@ -162,7 +163,7 @@ const App = () => {
             />
           )}
         </div>
-        <div className='cv'>
+        <div className='cv' id='cv-report'>
           <div className="generalcv-div">
             <GeneralSection
               props={generalInfoForm}
@@ -185,7 +186,10 @@ const App = () => {
             editForm={editExperienceForm}
           />
         </div>
+        <div></div>
+        <Save />
       </div>
+
     </div>
   )
 }

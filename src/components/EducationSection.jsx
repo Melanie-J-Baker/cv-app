@@ -33,19 +33,18 @@ const Subsection = ({ props }) => {
                     );
                 }
             })}
-            <div className='dates'>
-                {Object.entries(props).map(([key, value]) => {
-                    if (value !== props.form) {
-                        if (key == 'endDate') {
-                            return (
-                                <p key={key} className={key}>
-                                    {props[key]}
-                                </p>
-                            );
-                        }
+            <div></div>
+            {Object.entries(props).map(([key, value]) => {
+                if (value !== props.form) {
+                    if (key == 'endDate') {
+                        return (
+                            <p key={key} className={key}>
+                                {props[key]}
+                            </p>
+                        );
                     }
-                })}
-            </div>
+                }
+            })}
         </div>
     )
 }
