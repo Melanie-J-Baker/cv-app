@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
 import { format } from 'date-fns';
 
@@ -9,15 +10,16 @@ const ExperienceForm = (props) => {
     const [leaveDate, setLeaveDate] = useState('');
     const [form] = useState('experienceForm');
 
-    if (props.isEditing) {
-        useEffect(() => {
+    
+    useEffect((props) => {
+        if (props.isEditing) {
             setTitle(props.infoToEdit.title);
             setCompany(props.infoToEdit.company);
             setTasks(props.infoToEdit.tasks);
             setStartDate(format(new Date(props.infoToEdit.startDate), 'yyyy-MM-dd'));
             setLeaveDate(format(new Date(props.infoToEdit.leaveDate), 'yyyy-MM-dd'));
-        }, []);
-    }
+        }
+    }, []);
 
     const formValid = () => {
         return (
@@ -61,7 +63,6 @@ const ExperienceForm = (props) => {
             startDate: format(new Date(startDate.replaceAll('-', '/')), "MMM',' yyyy"),
             leaveDate: format(new Date(leaveDate.replaceAll('-', '/')), "MMM',' yyyy"),
             form: form,
-            //isShown: isShown,
         };
         props.saveInputData(formInfo);
         setTitle('');
@@ -69,7 +70,6 @@ const ExperienceForm = (props) => {
         setTasks('');
         setStartDate('');
         setLeaveDate('');
-        //setIsShown(false);
     };
     
     return (
@@ -134,8 +134,7 @@ const ExperienceForm = (props) => {
                                     tasks,
                                     startDate,
                                     leaveDate,
-                                    form,
-                                    //isShown,
+                                    form
                                 })
                             }
                         >Delete</button>

@@ -75,7 +75,6 @@ const App = () => {
         } else {
           setExperienceForm(experienceForm.concat(obj));
           setExperienceEdit(false);
-          //setExperienceEntry(null);
         }
         break;
     }

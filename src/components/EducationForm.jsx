@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
 import { format } from 'date-fns';
 
@@ -9,15 +10,14 @@ const EducationForm = (props) => {
 
     const form = "educationForm";
 
-    if (props.isEditing) {
-        useEffect(() => {
+    useEffect((props) => {
+        if (props.isEditing) {
             setSchool(props.infoToEdit.school);
             setCourse(props.infoToEdit.course);
             setEndDate(props.infoToEdit.endDate);
             setGrade(props.infoToEdit.grade);
-            //setIsShown(true);
-        }, []);
-    }
+        }
+    }, []);
 
     const formValid = () => {
         return school.length && course.length && endDate.length;
@@ -112,7 +112,6 @@ const EducationForm = (props) => {
                                     endDate,
                                     grade,
                                     form,
-                                    //isShown,
                                 })
                             }
                         >Delete</button>

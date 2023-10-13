@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
 
 const GeneralInfoForm = (props) => {
@@ -7,19 +8,15 @@ const GeneralInfoForm = (props) => {
     
     const form = 'generalInfoForm';
 
-    if (props.isEditing) {
-        useEffect(() => {
+    
+    useEffect((props) => {
+        if (props.isEditing) {
             setFullName(props.infoToEdit.fullName);
             setEmail(props.infoToEdit.email)
             setPhone(props.infoToEdit.phone);
-            //setIsShown(true);
-        }, []);
-    }
-
-    /*const toggleForm = (e) => {
-        setIsShown(!isShown)
-    }*/
-
+        }
+    }, []);
+    
     const handleChange = (e) => {
         const name = e.target.name;
         let value = e.target.value;
@@ -44,13 +41,11 @@ const GeneralInfoForm = (props) => {
             email: email,
             phone: phone,
             form: form,
-            //isShown: isShown,
         };
         props.saveInputData(formInfo);
         setFullName("");
         setEmail("");
         setPhone("");
-        //setIsShown(false);
     };
 
     const formValid = () => {
