@@ -54,9 +54,7 @@ h1, .cv {
   color: white;
   display: flex;
   flex-direction: column;
-  margin-left: auto;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin: auto;
 }
 
 .color, #color {
