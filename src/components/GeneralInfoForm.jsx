@@ -68,6 +68,7 @@ const GeneralInfoForm = (props) => {
                     name="fullName"
                     value={fullName}
                     placeholder="Full Name"
+                    autoComplete="name"
                     onChange={handleChange}
                     required
                 />
@@ -78,6 +79,7 @@ const GeneralInfoForm = (props) => {
                     name="email"
                     value={email}
                     placeholder="Email"
+                    autoComplete="email"
                     onChange={handleChange}
                     required
                 />
@@ -87,6 +89,7 @@ const GeneralInfoForm = (props) => {
                     id="phone"
                     name="phone"
                     value={phone}
+                    autoComplete="tel"
                     onChange={handleChange}
                     required
                 />

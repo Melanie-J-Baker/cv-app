@@ -3,8 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+    --dark: rgb(3, 3, 27);
+    --header: rgb(35, 35, 75);
+    --inputs: rgb(250, 250, 250, 0.6);
+}
 #root {
-  background-color: rgb(3, 3, 27);
+  background-color: var(--dark);
   width: 100%;
   height: 100%
 }
@@ -30,15 +36,38 @@ h1 {
   color: white;
   padding: 10px 0px;
   font-size: 3rem;
+  margin: auto;
 }
 
 h1, .cv {
   font-family: 'EB Garamond', serif;
 }
 
+.header {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+}
+
+.color-div {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.color, #color {
+  margin: 0 auto;
+  padding: 0;
+  background-color: var(--dark);
+}
+
+.color:hover, #color:hover {
+  cursor: pointer;
+}
+
 .inputs {
   font-family: 'Raleway', sans-serif;
-  background-color: rgb(250, 250, 250, 0.6);
+  background-color: var(--inputs);
   padding: 10px;
 }
 
@@ -75,7 +104,7 @@ input {
 button {
   border-radius: 5px;
   border: none;
-  background-color: rgb(3, 3, 27);
+  background-color: var(--dark);
   color: antiquewhite;
   transition: transform .5s ease-in-out;
   padding: 5px 20px;
@@ -115,7 +144,7 @@ button:hover {
 }
 
 .generalcv-div {
-  background-color: rgb(35, 35, 75);
+  background-color: var(--header);
   color: white;
   display: flex;
   flex-direction: column;

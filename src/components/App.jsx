@@ -8,6 +8,7 @@ import GeneralSection from './GeneralSection';
 import EducationSection from './EducationSection';
 import ExperienceSection from './ExperienceSection';
 import Save from './Save';
+import ColorPicker from './ColorPicker';
 
 
 const App = () => {
@@ -113,7 +114,11 @@ const App = () => {
 
   return (
     <div className="main">
-      <Header />
+      <div className="header">
+        <div></div>
+        <Header />
+        <ColorPicker />
+      </div>
       <div className="content">
         <div className='inputs'>
           {!generalInfoEdit && (

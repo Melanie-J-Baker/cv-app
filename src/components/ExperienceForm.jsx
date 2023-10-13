@@ -91,6 +91,7 @@ const ExperienceForm = (props) => {
                     id="company"
                     name="company"
                     value={company}
+                    autoComplete="organization"
                     placeholder="Company"
                     onChange={handleChange}
                 />
