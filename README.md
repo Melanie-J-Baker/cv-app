@@ -1,8 +1,7 @@
-# React + Vite
+CV Builder Application built with React as part of the Odin Project curriculum
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Visit page: https://mel-baker-cv-app.netlify.app/
 
-Currently, two official plugins are available:
+![image](https://github.com/Melanie-J-Baker/cv-app/assets/104843873/2d2a7a7c-747d-4a1e-891b-e9014e55bb22)
+![image](https://github.com/Melanie-J-Baker/cv-app/assets/104843873/9090e5c3-97d6-41a1-94a9-460092d5c98a)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
