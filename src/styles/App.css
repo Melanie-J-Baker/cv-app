@@ -114,11 +114,6 @@ button:hover {
   font-size: 1rem;
 }
 
-/*#cv-report {
-  width: 100%;
-  align-self: center;
-}*/
-
 .generalcv-div {
   background-color: rgb(35, 35, 75);
   color: white;
@@ -152,16 +147,11 @@ button:hover {
 .edu-subsection {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .school, .course, .grade,.endDate {
   margin: 2px;
-}
-
-.school {
-  grid-column-start: 1;
-  grid-column-end: 3;
 }
 
 .course, .title {
@@ -181,10 +171,12 @@ button:hover {
 
 .edit {
   align-self: flex-end;
+  padding: 3px 15px;
+  font-size: 0.8rem;
 }
 
 h2 {
-  padding: 10px;
+  padding-top: 10px;
   font-size: 1.2rem;
 }
 

@@ -47,18 +47,16 @@ const EducationForm = (props) => {
         e.preventDefault();
         const formInfo = {
             school: school,
-            course: course,
             endDate: format(new Date(endDate.replaceAll('-', '/')), "MMM',' yyyy"),
+            course: course,
             grade: grade,
             form: form,
-            //isShown: isShown,
         };
         props.saveInputData(formInfo);
         setSchool('');
         setCourse('');
         setEndDate('');
         setGrade('');
-        //setIsShown(false);
     };
     
     return (

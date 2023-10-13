@@ -23,8 +23,7 @@ const Subsection = ({ props }) => {
         <div className='edu-subsection'>
             {Object.entries(props).map(([key, value]) => {
                 if (
-                    value != props.form &&
-                    key != 'endDate'
+                    value != props.form
                 ) {
                     return (
                         <p key={key} className={key}>
@@ -34,17 +33,7 @@ const Subsection = ({ props }) => {
                 }
             })}
             <div></div>
-            {Object.entries(props).map(([key, value]) => {
-                if (value !== props.form) {
-                    if (key == 'endDate') {
-                        return (
-                            <p key={key} className={key}>
-                                {props[key]}
-                            </p>
-                        );
-                    }
-                }
-            })}
+
         </div>
     )
 }
