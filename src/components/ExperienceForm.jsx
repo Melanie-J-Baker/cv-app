@@ -10,16 +10,15 @@ const ExperienceForm = (props) => {
     const [leaveDate, setLeaveDate] = useState('');
     const [form] = useState('experienceForm');
 
-    
-    useEffect((props) => {
-        if (props.isEditing) {
+    if (props.isEditing) {
+        useEffect((props) => {
             setTitle(props.infoToEdit.title);
             setCompany(props.infoToEdit.company);
             setTasks(props.infoToEdit.tasks);
             setStartDate(format(new Date(props.infoToEdit.startDate), 'yyyy-MM-dd'));
             setLeaveDate(format(new Date(props.infoToEdit.leaveDate), 'yyyy-MM-dd'));
-        }
-    }, []);
+        }, []);
+    }
 
     const formValid = () => {
         return (

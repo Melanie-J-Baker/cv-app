@@ -10,15 +10,15 @@ const EducationForm = (props) => {
 
     const form = "educationForm";
 
-    useEffect((props) => {
-        if (props.isEditing) {
+    if (props.isEditing) {
+        useEffect((props) => {
             setSchool(props.infoToEdit.school);
             setCourse(props.infoToEdit.course);
             setEndDate(props.infoToEdit.endDate);
             setGrade(props.infoToEdit.grade);
-        }
-    }, []);
-
+        }, []);
+    }
+    
     const formValid = () => {
         return school.length && course.length && endDate.length;
     }
