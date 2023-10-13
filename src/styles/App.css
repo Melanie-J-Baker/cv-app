@@ -111,12 +111,13 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 1rem;
 }
 
-#cv-report {
+/*#cv-report {
   width: 100%;
   align-self: center;
-}
+}*/
 
 .generalcv-div {
   background-color: rgb(35, 35, 75);
@@ -131,12 +132,13 @@ button:hover {
 
 .general-section {
   padding: 5px;
+  letter-spacing: 1.5;
 }
 
 .fullName {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 600;
-  padding: 10px;
+  padding: 5px;
 }
 
 .edu-cv-section, .exp-cv-section {
@@ -144,6 +146,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   width: 100%;
+  font-size: 0.8rem;
 }
 
 .edu-subsection {

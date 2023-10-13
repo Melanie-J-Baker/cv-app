@@ -1,27 +1,31 @@
 import JsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 
 export default function Save() {
+
     const createPDF = () => {
-    const editButtons = document.querySelectorAll('.edit');
-    editButtons.forEach((button) => {
-        button.style.display = "none";
-    })
-    const cv = new JsPDF('portrait', 'pt', 'a4');
-    cv.html(document.querySelector('#cv-report'), {
-        html2canvas: {
-            scale: 0.7
-        },
-        callback: () => {
-            cv.save('cv.pdf');
-        }
-    })
-        
-    setTimeout(() => {
+        const editButtons = document.querySelectorAll('.edit');
         editButtons.forEach((button) => {
-            button.style.display = "block";
+            button.style.display = "none";
         })
-    }, 2000);
-};
+
+        const quality = 4 // Resolution of PDF output
+        html2canvas(document.querySelector('#cv-report'),
+            { scale: quality }
+        ).then(canvas => {
+            const pdf = new JsPDF('p', 'mm', 'a4');
+            pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 211, 298);
+            pdf.save('cv.pdf');
+            window.open(pdf.output('bloburl'));
+        });
+        
+        // Delay to allow screenshot to be taken by html.canvas before Edit buttons reappear
+        setTimeout(() => {
+            editButtons.forEach((button) => {
+                button.style.display = "block";
+            })
+        }, 2000);
+    };
 
   return (
     <div className="cv-pdf">

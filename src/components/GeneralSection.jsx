@@ -4,7 +4,7 @@ const GeneralSection = ({ props }) => {
       {Object.entries(props).map(([key, value]) => {
         if (value !== props.form) {
           return (
-            <div className="general-section">
+            <div key={key} className="general-section">
               <p key={key} className={key}>
                 {props[key]}
               </p>
