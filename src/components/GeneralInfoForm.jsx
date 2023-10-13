@@ -9,7 +9,7 @@ const GeneralInfoForm = (props) => {
     const form = 'generalInfoForm';
 
     if (props.isEditing) {
-        useEffect((props) => {
+        useEffect(() => {
             setFullName(props.infoToEdit.fullName);
             setEmail(props.infoToEdit.email)
             setPhone(props.infoToEdit.phone);

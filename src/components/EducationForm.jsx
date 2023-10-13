@@ -11,7 +11,7 @@ const EducationForm = (props) => {
     const form = "educationForm";
 
     if (props.isEditing) {
-        useEffect((props) => {
+        useEffect(() => {
             setSchool(props.infoToEdit.school);
             setCourse(props.infoToEdit.course);
             setEndDate(props.infoToEdit.endDate);

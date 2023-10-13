@@ -11,7 +11,7 @@ const ExperienceForm = (props) => {
     const [form] = useState('experienceForm');
 
     if (props.isEditing) {
-        useEffect((props) => {
+        useEffect(() => {
             setTitle(props.infoToEdit.title);
             setCompany(props.infoToEdit.company);
             setTasks(props.infoToEdit.tasks);
