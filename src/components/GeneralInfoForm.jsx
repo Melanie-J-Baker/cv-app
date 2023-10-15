@@ -8,14 +8,14 @@ const GeneralInfoForm = (props) => {
     
     const form = 'generalInfoForm';
 
-    if (props.isEditing) {
-        useEffect(() => {
+    useEffect(() => {
+        if (props.isEditing) {
             setFullName(props.infoToEdit.fullName);
             setEmail(props.infoToEdit.email)
             setPhone(props.infoToEdit.phone);
+        }
+    }, [props.isEditing, props.infoToEdit.fullName, props.infoToEdit.email, props.infoToEdit.phone]);
 
-        }, []);
-    }
     
     const handleChange = (e) => {
         const name = e.target.name;
