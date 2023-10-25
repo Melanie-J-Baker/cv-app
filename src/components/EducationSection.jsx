@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import uniqid from 'uniqid';
+import PropTypes from 'prop-types';
 
 const EducationSection = (props) => {
     const propsList = [...props.infoArray];
@@ -17,6 +17,11 @@ const EducationSection = (props) => {
         )
     })
     return <>{section}</>
+}
+
+EducationSection.propTypes = {
+    infoArray: PropTypes.array,
+    editForm: PropTypes.func,
 }
 
 const Subsection = ({ props }) => {
@@ -37,6 +42,12 @@ const Subsection = ({ props }) => {
 
         </div>
     )
+}
+
+Subsection.propTypes = {
+    key: PropTypes.number,
+    props: PropTypes.object,
+    form: PropTypes.object
 }
 
 export default EducationSection;

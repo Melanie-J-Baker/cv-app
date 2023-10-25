@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
 import { format } from 'date-fns';
+import PropTypes from 'prop-types';
 
 const EducationForm = (props) => {
     const [school, setSchool] = useState("");
@@ -121,6 +121,13 @@ const EducationForm = (props) => {
             </form>
         </div>  
     )
+}
+
+EducationForm.propTypes = {
+    saveInputData: PropTypes.func,
+    isEditing: PropTypes.bool,
+    infoToEdit: PropTypes.node,
+    deleteItem: PropTypes.func,
 }
 
 export default EducationForm

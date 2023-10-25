@@ -1,4 +1,5 @@
-/* eslint-disable react/prop-types */
+import PropTypes from 'prop-types';
+
 const GeneralSection = ({ props }) => {
   return (
     <>
@@ -16,5 +17,10 @@ const GeneralSection = ({ props }) => {
     </>
   );
 };
+
+GeneralSection.propTypes = {
+  props: PropTypes.node,
+}
+
 
 export default GeneralSection;

@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 const GeneralInfoForm = (props) => {
     const [fullName, setFullName] = useState("");
@@ -94,6 +95,12 @@ const GeneralInfoForm = (props) => {
         </div>
 
     )
+}
+
+GeneralInfoForm.propTypes = {
+    saveInputData: PropTypes.func,
+    isEditing: PropTypes.bool,
+    infoToEdit: PropTypes.node,
 }
 
 export default GeneralInfoForm;

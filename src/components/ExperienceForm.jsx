@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
 import { format } from 'date-fns';
+import PropTypes from 'prop-types';
 
 const ExperienceForm = (props) => {
     const [title, setTitle] = useState('');
@@ -143,6 +144,13 @@ const ExperienceForm = (props) => {
             </form>
         </div>
     )
+}
+
+ExperienceForm.propTypes = {
+    saveInputData: PropTypes.func,
+    isEditing: PropTypes.bool,
+    infoToEdit: PropTypes.node,
+    deleteItem: PropTypes.func
 }
 
 export default ExperienceForm
